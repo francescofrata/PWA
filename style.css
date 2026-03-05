@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: white;
+}
+
+/* Sole */
+.bg-clear {
+    background: linear-gradient(135deg, #FFB300, #FF8F00);
+}
+
+/* Nuvoloso */
+.bg-clouds {
+    background: linear-gradient(135deg, #78909C, #546E7A);
+}
+
+/* Pioggia */
+.bg-rain {
+    background: linear-gradient(135deg, #1565C0, #0D47A1);
+}
+
+/* Temporale */
+.bg-thunderstorm {
+    background: linear-gradient(135deg, #263238, #1a1a2e);
+}
+
+/* Neve */
+.bg-snow {
+    background: linear-gradient(135deg, #80DEEA, #4DD0E1);
+}
+
+/* Nebbia */
+.bg-mist,
+.bg-fog,
+.bg-haze {
+    background: linear-gradient(to right, #757f9a, #d7dde8);
+}
+
+/* NAVBAR */
+
+.custom-navbar {
+    padding: 20px 0;
+    background: transparent;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.logo span {
+    margin-left: 8px;
+}
+
+/* SEARCH */
+
+.search-box {
+    display: flex;
+    gap: 10px;
+}
+
+.search-box input {
+    padding: 10px 15px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    width: 200px;
+}
+
+.search-box button {
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    background: #ffffff;
+    color: #333;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background: #689ee6;
+    transform: scale(1.05);
+}
+
+/* MAIN */
+
+.main-container {
+    margin-top: 60px;
+}
+
+/* WEATHER CARD */
+
+.weather-card {
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    transition: 0.3s;
+}
+
+.weather-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-card:hover {
+    transform: translateY(5px);
+}
+
+.weather-card h1 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.weather-card h2 {
+    font-weight: 600;
+}
+
+/* INFO CARD */
+
+.info-card {
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.info-card h4 {
+    margin-bottom: 20px;
+}
+
+.info-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-card li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* card giorno dopo */
+.card{
+    background: transparent;
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.card:hover{
+    zoom: 1.2;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .search-box input {
+        width: 140px;
+    }
+
+    .weather-card {
+        padding: 30px;
+    }
+}
+
+/* MODAL DI ERRORE  */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);   
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    text-align: center;
+    width: 320px;
+    animation: popUp 0.3s ease;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.modal-icon {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.modal-content h2 {
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.modal-content button {
+    background: #ff4d4d;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.modal-content button:hover {
+    background: #e60000;
+    transform: scale(1.05);
+}
+
+.logo-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+}
+
+@keyframes popUp {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* DEFINIZIONE ANIMAZIONE PULSE */
+/* Questa animazione fa "pulsare" la card ingrandendola e rimpicciolendola */
+.pulse {
+    display: inline-block;
+    animation: pulse 1s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
